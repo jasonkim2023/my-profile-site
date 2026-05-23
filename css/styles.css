@@ -1,0 +1,181 @@
+/* 기본 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 커스텀 애니메이션 - fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 커스텀 애니메이션 - fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 애니메이션 클래스 */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* 애니메이션 딜레이 */
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* 나비게이션 스타일 추가 */
+#navbar {
+  transition: all 0.3s ease;
+}
+
+#navbar.bg-white {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 스크롤바 커스터마이징 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 선택 텍스트 색상 */
+::selection {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* 그라디언트 텍스트 */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 링크 기본 스타일 */
+a {
+  text-decoration: none;
+}
+
+/* 버튼 기본 스타일 */
+button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+/* 폼 요소 기본 스타일 */
+input,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* 섹션 기본 패딩 */
+section {
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* 카드 호버 효과 */
+.project-card {
+  transition: all 0.3s ease;
+}
+
+/* 스킬 프로그레스 바 애니메이션 */
+.skill-progress {
+  transition: width 1s ease-out;
+}
+
+/* 반응형 텍스트 크기 조정 */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* 부드러운 전환 */
+* {
+  transition-timing-function: ease-in-out;
+}
+
+/* 포커스 스타일 */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* 인쇄 스타일 */
+@media print {
+  nav,
+  footer {
+    display: none;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}
+
+/* 다크 모드 지원 (선택사항) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+}
